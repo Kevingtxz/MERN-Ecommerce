@@ -13,15 +13,15 @@ function App () {
       <div className='grid-container'>
         <header className='row'>
           <div>
-            <Link className='brand' href='/'>amazona</Link>
+            <Link className='brand' to='/'>amazona</Link>
           </div>
           <div>
-            <Link href='/cart'>Cart
+            <Link to='/cart'>Cart
               {cartItems.length > 0 && (
                 <span className='badge'>{cartItems.length}</span>
               )}
             </Link>
-            <Link href='/signin'>Sing In</Link>
+            <Link to='/signin'>Sing In</Link>
           </div>
         </header>
         <main>
