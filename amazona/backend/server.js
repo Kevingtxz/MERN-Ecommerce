@@ -1,29 +1,17 @@
 import express from 'express'
-import data from './data.js'
 import mongoose from 'mongoose'
 import userRouter from './router/userRouter.js'
+import productRouter from './router/productRouter.js'
 
 const app = express()
-mongoose.connect('mongodb://localhost/amazona', {
+mongoose.connect(process.env.MONGODB_URL || 'mongodb://localhost/amazona', {
   useNewUrlParser: true,
   useUnifiedTopology: true,
   useCreateIndex: true
 })
 
-app.get('/api/products/:id', (req, res) => {
-  const product = data.products.find((x) => x._id === req.params.id)
-  if (product) {
-    res.send(product)
-  } else {
-    res.status(404).send({ message: 'Product Not Found' })
-  }
-})
-
-app.get('/api/products', (req, res) => {
-  res.send(data.products)
-})
-
 app.use('/api/users', userRouter)
+app.use('/api/products', productRouter)
 app.get('/', (req, res) => {
   res.send('Server is ready')
 })
