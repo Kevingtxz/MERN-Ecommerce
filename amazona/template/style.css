@@ -1,9 +1,9 @@
-html{
+html {
     font-size: 62.5%;
     box-sizing: border-box;
 }
 
-body{
+body {
     margin: 0;
     height: 100vh;
     font-size: 1.6rem;
@@ -12,7 +12,7 @@ body{
 
 
 /* Layout */
-.grid-container{
+.grid-container {
     display: grid;
     grid-template-areas:
         'header'
@@ -23,79 +23,93 @@ body{
     height: 100%;
 }
 
-header{
+header {
     grid-area: header;
     background-color: #203040;
 }
 
-main{
+main {
     grid-area: main;
     padding: 1rem;
 }
 
-footer{
+footer {
     grid-area: footer;
     background-color: #203040;
     color: #ffffff;
 }
 /* Common */
-h1{
+h1 {
     font-size: 1.8rem;
     padding: 1rem;
 }
-h2{
+h2 {
     font-size: 1.6rem;
     padding: 1rem;
 }
-a:hover{
+a:hover {
     color: #ff8000;
 }
 
 /* Header */
-header a{
+header a {
     color: #ffffff;
     padding: 1rem;
 }
-a.brand{
+a.brand {
     color: #ffffff;
     font-size: 3rem;
     font-weight: bold;
 }
-.row{
+.row {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
 }
-.row.center{
+.row.center {
     justify-content: center;
 }
 /* Image */
-img{
+img {
     border-radius: 0.5rem;
 }
-img.medium{
+img.medium {
     max-width: 29rem;
     width: 100%;
 }
 /* Card */
-.card{
+.card {
     border: 0.1rem #c0c0c0 solid;
     background-color: #f8f8f8;
     border-radius: 0.5rem;
     margin: 1rem;
 }
-.card-body{
+.card-body {
     padding: 1rem;
 }
-.card-body > *{
+.card-body > * {
     margin-bottom: 0.5rem;
 }
-.price{
+.price {
     font-size: 2rem;
 }
 /* Rating */
-.rating span{
+.rating span {
     color: #f0c040;
     margin: 0.1rem;
+}
+/* Form */
+.form {
+    max-width: 60rem;
+    margin: 0 auto;
+}
+.form > div {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem;
+}
+.form label {
+    margin: 1rem 0;
+    display: block;
 }

@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react'
 import { addToCart, removeFromCart } from '../actions/cartActions'
 import { useDispatch, useSelector } from 'react-redux'
-import MessageBox from '../components/MessageBox'
 import { Link } from 'react-router-dom'
+import MessageBox from '../components/MessageBox.js'
 
 export default function CartScreen (props) {
   const productId = props.match.params.id

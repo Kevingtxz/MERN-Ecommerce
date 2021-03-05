@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
-import Rating from '../components/Rating'
 import { useSelector, useDispatch } from 'react-redux'
-import LoadingBox from '../components/LoadingBox'
-import MessageBox from '../components/MessageBox'
-import { detailsProduct } from '../actions/productActions'
+import Rating from '../components/Rating.js'
+import LoadingBox from '../components/LoadingBox.js'
+import MessageBox from '../components/MessageBox.js'
+import { detailsProduct } from '../actions/productActions.js'
 
 export default function ProductScreen (props) {
   const dispatch = useDispatch()
